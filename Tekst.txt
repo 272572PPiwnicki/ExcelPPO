@@ -1,0 +1,13 @@
+Klasa Cell jest abstrakcyjna i zawiera czysto wirtualne metody, które bêd¹ implementowane w klasach pochodnych.
+
+W pliku Spreadsheet.cpp kontynuujemy implementacjê metod klasy Spreadsheet. 
+Dodane zosta³y implementacje metod addRow(), addColumn(), modifyCell(), getCellValue(), getCellType(), 
+calculateSum(), calculateAverage(), saveToFile() i loadFromFile(). 
+Te metody realizuj¹ odpowiednie operacje na arkuszu kalkulacyjnym, zarz¹dzaj¹c komórkami i operacjami na nich.
+W metodach addRow() i addColumn() tworzymy nowe wiersze i kolumny w arkuszu, 
+inicjalizuj¹c je obiektami StringCell. 
+W metodzie modifyCell() modyfikujemy wartoœæ komórki na podstawie podanych parametrów wiersza i kolumny. 
+Metody getCellValue() i getCellType() zwracaj¹ wartoœæ i typ komórki dla okreœlonego wiersza i kolumny.
+Metody calculateSum() i calculateAverage() obliczaj¹ sumê i œredni¹ wartoœci komórek w okreœlonym zakresie, podanych jako parametry.
+Metoda saveToFile() zapisuje zawartoœæ arkusza do pliku w formacie CSV. 
+Metoda loadFromFile() wczytuje arkusz z pliku w formacie CSV i aktualizuje zawartoœæ arkusza na podstawie wczytanych danych.
