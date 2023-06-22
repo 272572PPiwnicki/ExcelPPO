@@ -1,35 +1,15 @@
-#include <iostream>
-#include <fstream>
-#include <vector>
+#ifndef CELL_H
+#define CELL_H
+
 #include <string>
-#include <sstream>
-#include <iomanip>
 
-// Klasa reprezentuj¹ca pojedyncz¹ komórkê w arkuszu
 class Cell {
-private:
-    std::string content;
-    std::string type;
-
 public:
-    Cell() {
-        content = "";
-        type = "text";
-    }
+    virtual ~Cell() {}
 
-    void setContent(const std::string& newContent) {
-        content = newContent;
-    }
-
-    std::string getContent() const {
-        return content;
-    }
-
-    void setType(const std::string& newType) {
-        type = newType;
-    }
-
-    std::string getType() const {
-        return type;
-    }
+    virtual std::string getValue() const = 0;
+    virtual void setValue(const std::string& value) = 0;
+    virtual std::string getType() const = 0;
 };
+
+#endif  // CELL_H
